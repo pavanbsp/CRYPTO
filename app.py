@@ -1,4 +1,3 @@
-from math import e
 from flask import Flask, render_template, request
 from basic_fact import factorize
 from pollard_rho import factors
