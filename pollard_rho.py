@@ -1,7 +1,9 @@
 def isqrt(n): # newton
-    x = n; y = (x + 1) // 2
+    x = n
+    y = (x + 1) // 2
     while y < x:
-        x = y; y = (x + n // x) // 2
+        x = y
+        y = (x + n // x) // 2
     return x
 
 def isSquare(n):
@@ -60,6 +62,7 @@ def factors(n):
             return d
         f, w = f+wheel[w], w+1
         if w == 11: w = 3
+
     if isSquare(n):
         f = isqrt(n)
         if f not in d:
@@ -67,6 +70,7 @@ def factors(n):
         else:
             d[f]+=2
         return d
+
     for i in range(1,n):
         s = isqrt(n*i)
         if s*s <= n*i: s += 1
@@ -80,6 +84,6 @@ def factors(n):
                 d[f]+=1
             if n//f not in d:
                 d[n//f] = 1
-            else:
+            else:   
                 d[n//f]+=1
             return d
