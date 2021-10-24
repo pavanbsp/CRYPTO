@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from basic_fact import factorize
+from divison_method import factorize
 from pollard_rho import factors
 import time
 
@@ -17,7 +17,7 @@ def result():
     start = current_milli_time()
     var_1 = request.form.get("var_1", type=int)
 
-    if request.form['submit_button'] == 'Normal(slow)':
+    if request.form['submit_button'] == 'Divison method(slow)':
         d = factorize(var_1)
     else:
         d = factors(var_1)

@@ -42,10 +42,9 @@ def factors(n):
         return gcd(b, a%b)
     # 2,3,5-wheel to cube root of n
     wheel = [1,2,2,4,2,4,2,4,6,2,6]
-    w, f, fs = 0, 2, []
+    w, f = 0, 2
     d = dict()
     while f*f*f <= n:
-        # print f, n, fs
         while n % f == 0:
             if f not in d:
                 d[f] = 1
@@ -58,29 +57,23 @@ def factors(n):
                 d[n] = 1
             else:
                 d[n]+=1
-            fs.append(n)
             return d
         f, w = f+wheel[w], w+1
         if w == 11: w = 3
-    # n must be semi-prime, so use
-    # william hart's fermat variant
     if isSquare(n):
-        # print "square", n
         f = isqrt(n)
         if f not in d:
             d[f] = 2
         else:
             d[f]+=2
-        fs.append(f); fs.append(f)
         return d
     for i in range(1,n):
         s = isqrt(n*i)
         if s*s <= n*i: s += 1
         m = pow(s,2,n)
-        # print i, s, m
         if isSquare(m):
-            t = isqrt(m); f = gcd(n, s-t)
-            fs.append(f); fs.append(n//f)
+            t = isqrt(m)
+            f = gcd(n, s-t)
             if f not in d:
                 d[f] = 1
             else:
@@ -90,5 +83,3 @@ def factors(n):
             else:
                 d[n//f]+=1
             return d
-
-#print(factors(12345678901234567))
