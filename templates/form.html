@@ -3,27 +3,27 @@
     <head>
         <title>FACTORIZATION</title>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../static/main.css">
 	</head>
 
-	<body align=center onload="myFunction()">
+	<body align=center onload="myFunction()" >
 		<div class="row">
 			<div class="col-md-3"></div>
-			<div class="col-md-6"><legend><h1>PRIME NUMBER FACTORIZATION</h1></legend></div>
+			<div class="col-md-6" ><h1 class="heading">PRIME NUMBER FACTORIZATION</h1></div>
 			<div class="col-md-3"></div>
 		</div>
 			<br>
 			<div class="row">
-			<div class="col-md-3"></div>
-			<div class="col-md-6">
+			<div class="col-md-8">
 				<form class="form-horizontal" action=""  method="post">
 					<div class="form-group">
-						<label class="control-label col-xs-3" for="var_1">Input - </label>
+						<label class="control-label col-xs-3" for="var_1" id="inputs" style="padding-right: 110px;">Input - </label>
 						<div class="col-xs-7">
-							<input type="number" class="form-control" id="inp1" name="var_1" placeholder="Please enter a valid integer">
+							<input type="number" class="form-control" id="inp1" name="var_1"placeholder="Please enter a valid integer">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-xs-3" for="var_1">Factorization - </label>
+						<label class="control-label col-xs-3" for="var_1" id="inputs" style="padding-right: 50px;">Factorization - </label>
 						<div class="col-xs-7">
 							<textarea type="text" class="form-control" id="inp2"
 							name="var_2" placeholder="Result will be displayed here"
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 				<div class="form-group">
-						<label class="control-label col-xs-3" for="var_1">Power Index form - </label>
+						<label class="control-label col-xs-3" for="var_1" id="inputs">Power Index form - </label>
 						<div class="col-xs-7">
 							<textarea type="text" class="form-control" id="inp3"
 							name="var_3" placeholder="Result will be displayed here"
@@ -40,7 +40,7 @@
 					</div>
 
 				<div class="form-group">
-						<label class="control-label col-xs-3" for="var_1">No of divisors - </label>
+						<label class="control-label col-xs-3" for="var_1" id="inputs" style="padding-right: 45px;">No of divisors - </label>
 						<div class="col-xs-7">
 							<textarea type="text" class="form-control" id="inp4"
 							name="var_3" placeholder="Result will be displayed here"
@@ -49,7 +49,7 @@
 					</div>
 
 				<div class="form-group">
-						<label class="control-label col-xs-3" for="var_1">Sum of divisors - </label>
+						<label class="control-label col-xs-3" for="var_1" id="inputs" style="padding-right: 30px;">Sum of divisors - </label>
 						<div class="col-xs-7">
 							<textarea type="text" class="form-control" id="inp5"
 							name="var_3" placeholder="Result will be displayed here"
@@ -58,20 +58,23 @@
 					</div>
 
 					<div class="form-group">
-						<label class="control-label col-xs-3" for="var_1">Time taken - </label>
-						<label class="control-label col-xs-4" for="var_1">{{t}} </label>
+						<label class="control-label col-xs-3" for="var_1" id="inputs" style="padding-right: 65px;">Time taken - </label>
+						<label class="control-label col-xs-4" for="var_1" id="time">{{t}} </label>
 					</div>
 
 					<div class="form-group">
             			<div class="col-xs-offset-3 col-xs-9">
-                			<input type="submit"  name="submit_button" class="btn btn-success" value="Normal(slow)">
-							<input type="submit"  name="submit_button" class="btn btn-success" value="Pollard(fast)">
-                			<input type="reset" class="btn btn-danger" value="Reset">
+                			<input type="submit"  name="submit_button" class="btn btn-primary" value="Normal algo(slow)" id="button">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="submit"  name="submit_button" class="btn btn-primary" value="Pollard-rho algo(fast)" id="button">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                			<input type="reset" class="btn btn-danger" value="Reset" id="button">
             			</div>
         			</div>
         		</form>
         	</div>
-        	<div class="col-md-3"></div></div>
+        	<div class="col-md-4"></div>
+		</div>
 		</div>
 	</body>
 </html>
