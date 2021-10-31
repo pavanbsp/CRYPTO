@@ -3,6 +3,7 @@ body {
     background-image: url('https://www.radio-ip.com/wp-content/uploads/2020/02/What-is-Quantum-Cryptography-and-How-Will-it-Help-the-Future-of-Security-1.png');
     background-size: 100% 100%;
     overflow: hidden;
+    background-attachment: fixed;
   }
 
 .heading{
